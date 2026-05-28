@@ -9,7 +9,7 @@ Parametric OpenSCAD covers for flower boxes that let water drain while blocking 
 
 ## Using the SCAD files
 
-Open either file in OpenSCAD. All parameters are exposed in the Customizer panel (View > Customizer).
+All parameters are exposed in the Customizer panel (View > Customizer).
 
 **Key parameters for both designs:**
 
@@ -21,22 +21,24 @@ Open either file in OpenSCAD. All parameters are exposed in the Customizer panel
 
 **Printing in pieces:**
 
-Both files support splitting the panel into a grid of segments for printers with limited bed size. Set `segments_x` and `segments_y` to divide the panel, then set `segment_to_print` to render one piece at a time. Each piece is re-centred at the origin for printing.
+Both files support splitting the panel into a grid of segments for printers with limited bed size. Set `segments_x` and `segments_y` to divide the panel, then set `segment_to_print` to render one piece at a time. Each piece is re-centred at the origin for printing. You can split to fit printer or to get segments that are easier to install around plants.
 
 ## Circular design
 
+- [openscad/circular-squirrel-guard.scad](openscad/circular-squirrel-guard.scad)
 - One center plant hole with a ring of spikes around it
 - Satellite holes arranged in a ring at a configurable orbit radius (defaults to the midpoint between the center hole edge and the panel edge)
 - Border spikes on the outer ring, count rounded up to a multiple of `satellite_count` for rotational symmetry
 ![circular guard preview](images/circ_6_segment_spikes.png)
 
-
 ## Rectangular design
 
+- [openscad/rectangular-squirrel-guard.scad](openscad/rectangular-squirrel-guard.scad)
 - Two independent rows of plant holes: front row and back row
 - Each row has its own hole count, radius, Y-offset, and spike settings
 - Border spikes on all four edges using a CCW perimeter traversal so corner placement is unbiased
 ![rectangle guard preview](images/rect_3_segment_spikes.png)
+![rectangle guard no spikes preview](images/rect_no_spikes.png)
 
 ## Running the tests
 
