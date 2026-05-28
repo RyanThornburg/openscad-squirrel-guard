@@ -50,3 +50,7 @@ python -m pytest -v 2>&1
 ```
 
 Both test files are picked up automatically via `pytest.ini`. Tests cover slot grid dimensions, spike placement validity, hole keepout zones, self-collision checks, and rotational symmetry.
+
+## Profile on MakerWorld
+
+- [Profile on MakerWorld](https://makerworld.com/en/models/2860037-planter-squirrel-guard-parametric)
