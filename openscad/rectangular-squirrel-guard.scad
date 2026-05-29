@@ -35,7 +35,7 @@ border = 2; // [0:1:30]
 /* [Slot Holes] */
 
 // Slot width — keep under 18 mm to block a squirrel paw (mm)
-slot_width = 6; // [2:1:25]
+slot_width = 8; // [2:1:25]
 
 // Slot length (mm)
 slot_length = 12; // [2:2:80]
@@ -52,17 +52,17 @@ slot_axis = 1; // [0:Along length (Y), 1:Across width (X)]
 front_row_enabled = true; // [true:Yes, false:No]
 
 // Number of holes in the front row
-front_hole_count = 5; // [1:1:20]
+front_hole_count = 2; // [1:1:20]
 
 // Radius of each front hole (mm)
-front_hole_radius = 20; // [5:1:150]
+front_hole_radius = 40; // [5:1:150]
 
 // Slot-free margin around each front hole (mm)
 front_hole_clearance = 2; // [0:1:20]
 
 // Y offset of front row from panel centre — negative = toward front (mm)
 // 0 = centred, negative = toward front edge, positive = toward back edge
-front_row_offset = -45; // [-300:5:300]
+front_row_offset = 0; // [-300:5:300]
 
 /* [Back Row Holes] */
 
@@ -73,13 +73,13 @@ back_row_enabled = true; // [true:Yes, false:No]
 back_hole_count = 1; // [1:1:12]
 
 // Radius of each back hole (mm)
-back_hole_radius = 40; // [5:1:150]
+back_hole_radius = 20; // [5:1:150]
 
 // Slot-free margin around each back hole (mm)
-back_hole_clearance = 2; // [0:1:20]
+back_hole_clearance = 0; // [0:1:20]
 
 // Y offset of back row from panel centre — positive = toward back (mm)
-back_row_offset = 20; // [-750:1:750]
+back_row_offset = 10; // [-750:1:750]
 
 /* [Front Row Spikes] */
 
@@ -96,30 +96,30 @@ front_spike_height = 12; // [3:1:40]
 front_spike_base = 5; // [2:0.5:14]
 
 // Number of spikes around each front hole
-front_spike_count = 8; // [1:1:36]
+front_spike_count = 11; // [1:1:36]
 
 // Gap between front hole edge and spike base (mm)
-front_spike_clearance = 3; // [0:0.5:15]
+front_spike_clearance = 2; // [0:0.5:15]
 
 /* [Back Row Spikes] */
 
 // Enable spikes around back row holes
-back_spikes_enabled = true; // [true:Yes, false:No]
+back_spikes_enabled = false; // [true:Yes, false:No]
 
 // Back spike shape
 back_spike_shape = 0; // [0:Pyramid, 1:Cone, 2:Blunt nub]
 
 // Back spike height (mm)
-back_spike_height = 12; // [3:1:40]
+back_spike_height = 14; // [3:1:40]
 
 // Back spike base width (mm)
 back_spike_base = 5; // [2:0.5:14]
 
 // Number of spikes around each back hole
-back_spike_count = 8; // [1:1:36]
+back_spike_count = 10; // [1:1:36]
 
 // Gap between back hole edge and spike base (mm)
-back_spike_clearance = 3; // [0:0.5:15]
+back_spike_clearance = 1; // [0:0.5:15]
 
 /* [Border Spikes] */
 
@@ -136,10 +136,10 @@ border_spike_height = 15; // [3:1:40]
 border_spike_base = 6; // [2:0.5:14]
 
 // Number of spikes along each length edge (front and back long sides)
-border_spikes_on_length_edges = 12; // [1:1:60]
+border_spikes_on_length_edges = 14; // [1:1:60]
 
 // Number of spikes along each width edge (left and right short sides)
-border_spikes_on_width_edges = 6; // [1:1:40]
+border_spikes_on_width_edges = 4; // [1:1:40]
 
 // Margin inward from panel edge where border spikes sit (mm)
 border_spike_margin = 8; // [0:1:25]
@@ -152,7 +152,7 @@ spike_priority = true; // [true:Spike wins (skip the slot), false:Slot wins (ski
 /* [Segments] */
 
 // Number of columns (splits along width)
-segments_x = 1; // [1:1:6]
+segments_x = 3; // [1:1:6]
 
 // Number of rows (splits along length)
 segments_y = 1; // [1:1:8]
