@@ -484,7 +484,9 @@ module segment(si_x, si_y) {
 
 if (segment_to_print == 0) {
   preview_gap = (segments_x > 1 || segments_y > 1) ? 2 : 0;
-  for (si_x = [0:segments_x - 1])
+  total_w = panel_width + (segments_x - 1) * preview_gap;
+  total_l = panel_length + (segments_y - 1) * preview_gap;
+  translate([-total_w / 2, -total_l / 2, 0])for (si_x = [0:segments_x - 1])
     for (si_y = [0:segments_y - 1])
       translate([si_x * preview_gap, si_y * preview_gap, 0])
         segment(si_x, si_y);
@@ -492,6 +494,6 @@ if (segment_to_print == 0) {
   idx = segment_to_print - 1;
   si_x = idx % segments_x;
   si_y = floor(idx / segments_x);
-  translate([-si_x * seg_w, -si_y * seg_l, 0])
+  translate([-seg_w / 2, -seg_l / 2, 0])
     segment(si_x, si_y);
 }

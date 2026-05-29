@@ -159,7 +159,6 @@ segments_y = 1; // [1:1:8]
 
 // Which segment to render — 0 = full preview, 1+ = individual piece
 segment_to_print = 0; // [0:Full preview, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-preview_gap = 2; // [0:0.1:5]
 
 /* [Hidden] */
 $fn = 32;
@@ -513,6 +512,7 @@ module segment(si_x, si_y) {
 // ─── Top-level render ─────────────────────────────────────────────────────────
 
 if (segment_to_print == 0) {
+  preview_gap = (segments_x > 1 || segments_y > 1) ? 2 : 0;
   total_w = panel_width + (segments_x - 1) * preview_gap;
   total_l = panel_length + (segments_y - 1) * preview_gap;
   translate([-total_w / 2, -total_l / 2, 0])for (si_x = [0:segments_x - 1])
