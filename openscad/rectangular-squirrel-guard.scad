@@ -16,7 +16,7 @@
 panel_width = 350; // [20:1:1500]
 
 // Length of the panel — match the inside of your flower box (mm)
-panel_length = 200; // [20:1:1500]
+panel_length = 100; // [20:1:1500]
 
 // Thickness of the panel (mm)
 panel_thickness = 3; // [2:0.5:10]
@@ -50,7 +50,7 @@ front_hole_count = 5; // [1:1:20]
 front_hole_radius = 20; // [5:1:150]
 
 // Slot-free margin around each front hole (mm)
-front_hole_clearance = 2; // [2:1:20]
+front_hole_clearance = 2; // [0:1:20]
 
 // Y offset of front row from panel centre — negative = toward front (mm)
 // 0 = centred, negative = toward front edge, positive = toward back edge

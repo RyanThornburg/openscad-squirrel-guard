@@ -40,7 +40,7 @@ slot_axis = 0; // [0:Along Y, 1:Along X]
 center_hole_enabled = true; // [true:Yes, false:No]
 
 // Radius of the center hole (mm)
-center_hole_radius = 25; // [25:5:200]
+center_hole_radius = 25; // [5:1:200]
 
 // Slot-free margin around the center hole (mm)
 center_hole_clearance = 1; // [0:1:20]
@@ -54,7 +54,7 @@ satellite_holes_enabled = true; // [true:Yes, false:No]
 satellite_count = 6; // [2:1:12]
 
 // Radius of each satellite hole (mm)
-satellite_hole_radius = 22; // [22:5:80]
+satellite_hole_radius = 20; // [5:1:80]
 
 // Slot-free margin around each satellite hole (mm)
 satellite_hole_clearance = 0; // [0:1:20]
@@ -362,8 +362,7 @@ ALL_SPIKES = concat(HOLE_ACC, BORDER_ACC);
 // Uses dist_to_rrect SDF — matches the rectangular variant and avoids AABB false
 // positives that suppress valid drainage slots near spike corners.
 function slot_hits_any_spike(slx, sly) =
-  let (_shx = sw / 2, _shy = sl / 2, _sr = min(sw, sl) / 2)
-  len(
+  let (_shx = sw / 2, _shy = sl / 2, _sr = min(sw, sl) / 2) len(
     [
       for (p = ALL_SPIKES) if (
         dist_to_rrect(p[0], p[1], slx, sly, _shx, _shy, _sr) < p[2] / 2
