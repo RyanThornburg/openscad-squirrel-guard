@@ -484,8 +484,8 @@ module segment(si_x, si_y) {
 
 if (segment_to_print == 0) {
   preview_gap = (segments_x > 1 || segments_y > 1) ? 2 : 0;
-  total_w = panel_width + (segments_x - 1) * preview_gap;
-  total_l = panel_length + (segments_y - 1) * preview_gap;
+  total_w = panel_diameter + (segments_x - 1) * preview_gap;
+  total_l = panel_diameter + (segments_y - 1) * preview_gap;
   translate([-total_w / 2, -total_l / 2, 0])for (si_x = [0:segments_x - 1])
     for (si_y = [0:segments_y - 1])
       translate([si_x * preview_gap, si_y * preview_gap, 0])
